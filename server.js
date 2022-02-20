@@ -25,7 +25,7 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
-app.get("/api/timestamp/", (req, res) => {
+app.get("/api/", (req, res) => {
   res.json(timestamp.currentTimeStamp());
 });
 
@@ -34,7 +34,7 @@ app.get("/api/timestamp/", (req, res) => {
  * 
  * @returns {String} json response
  */
-app.get("/api/timestamp/:date_string", (req, res) => {
+app.get("/api/:date_string", (req, res) => {
   res.json(timestamp.processTimeStampRequest(req.params.date_string));
 });
 
