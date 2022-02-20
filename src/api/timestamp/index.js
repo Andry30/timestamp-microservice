@@ -18,7 +18,7 @@ const currentTimeStamp = () => {
 const processTimeStampRequest = (date_string) => {
 
     if(/^\d{5,}/.test(date_string)) {
-        return {"unix": date_string, "utc": new Date(parseInt(date_string)).toUTCString()};
+        return {"unix": parseInt(date_string), "utc": new Date(parseInt(date_string)).toUTCString()};
     }
 
     const date = new Date(date_string);
